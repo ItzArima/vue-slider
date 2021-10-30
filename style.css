@@ -63,3 +63,7 @@ button{
     border: 3px solid white;
     opacity: 1;
 }
+
+main{
+    margin-top: 9rem;
+}

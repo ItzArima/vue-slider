@@ -137,7 +137,7 @@ function resume(){
         animation = setInterval(animazione,1500);
         scorri = setInterval(intervallo, 3000);
         clear = 0
-        console.log(clear);
+        console.log(clear+" clear");
         clearTimeout(resume)
 }
 
