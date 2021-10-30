@@ -52,8 +52,6 @@ const app = new Vue({
             var activeDisp = document.getElementById("selected-img")  
             activeDisp.classList.remove("active-display")     
             activeDisp.classList.add("active-display")        
-            opacity.style.opacity = opacity.style.opacity == "0" ? "1" : "0";
-            opacity.style.transition = "all 1s"
         },
         down(){
             console.log("down");
@@ -76,8 +74,6 @@ const app = new Vue({
             var activeDisp = document.getElementById("selected-img")  
             activeDisp.classList.remove("active-display")     
             activeDisp.classList.add("active-display")  
-            opacity.style.opacity = opacity.style.opacity == "0" ? "1" : "0";
-            opacity.style.transition = "all 1s"
         }
     }
        
