@@ -1,3 +1,4 @@
+var clear = 0
 const app = new Vue({
     el : "#root",
     data: {
@@ -52,6 +53,14 @@ const app = new Vue({
             var activeDisp = document.getElementById("selected-img")  
             activeDisp.classList.remove("active-display")     
             activeDisp.classList.add("active-display")        
+            clearInterval(scorri)
+            clearInterval(animation)
+            clear++;
+            if(clear==1){    
+                setTimeout(resume,5000);
+            }   
+            opacity.style.opacity = "1"
+            opacity.style.transition = "all 0s" 
         },
         down(){
             console.log("down");
@@ -74,6 +83,14 @@ const app = new Vue({
             var activeDisp = document.getElementById("selected-img")  
             activeDisp.classList.remove("active-display")     
             activeDisp.classList.add("active-display")  
+            clearInterval(scorri)
+            clearInterval(animation)
+            clear++;
+            if(clear==1){    
+                setTimeout(resume,5000);
+            }   
+            opacity.style.opacity = "1"
+            opacity.style.transition = "all 0s" 
         }
     }
        
@@ -114,4 +131,13 @@ var active = document.getElementsByClassName("selector");
 active[0].id = "active"
 
 
+
+
+function resume(){
+        animation = setInterval(animazione,1500);
+        scorri = setInterval(intervallo, 3000);
+        clear = 0
+        console.log(clear);
+        clearTimeout(resume)
+}
 

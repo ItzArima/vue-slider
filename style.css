@@ -18,7 +18,7 @@
 
 #selected-img{
     position: relative;
-    opacity: 0;
+    opacity: 1;
 }
 
 #selected-img img{
@@ -47,6 +47,7 @@
 
 .selector{
     height: 120px;
+    opacity: 0.5;
 }
 
 .image-selector{
@@ -55,12 +56,10 @@
 
 button{
     width: 50px;
+    z-index: 1;
 }
 
 #active{
     border: 3px solid white;
-}
-
-#selected-img:active{
     opacity: 1;
 }
