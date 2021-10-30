@@ -18,6 +18,7 @@
 
 #selected-img{
     position: relative;
+    opacity: 0;
 }
 
 #selected-img img{

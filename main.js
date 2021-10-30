@@ -90,7 +90,7 @@ var animation = setInterval(animazione,1500);
 
 function animazione(){
     opacity.style.opacity = opacity.style.opacity == "0" ? "1" : "0";
-    opacity.style.transition = "all 1s"
+    opacity.style.transition = "all 1.5s"
 }
 
 
