@@ -40,6 +40,22 @@ const app = new Vue({
                 app.counter--;
             }    
             console.log(app.counter);
+            if(app.counter == 0){
+                var prev = 4;
+            }
+            else{
+                var prev = app.counter - 1;
+            }
+            if(app.counter == 4){
+                var next = 0;
+            }
+            else{
+                var next = app.counter - 1;
+            }
+            var active = document.getElementsByClassName("selector");
+            active[app.counter].id = "active";
+            active[prev].id = "no-active";
+            active[next].id = "no-active"            
         },
         down(){
             console.log("down");
@@ -50,9 +66,53 @@ const app = new Vue({
                 app.counter++;
             }    
             console.log(app.counter);
-
+            if(app.counter == 0){
+                var prev = 4;
+            }
+            else{
+                var prev = app.counter - 1;
+            }
+            if(app.counter == 4){
+                var next = 0;
+            }
+            else{
+                var next = app.counter - 1;
+            }
+            var active = document.getElementsByClassName("selector");
+            active[app.counter].id = "active";
+            active[prev].id = "no-active";
+            active[next].id = "no-active"
         }
     }
        
 })
+
+
+var scorri = setInterval(intervallo, 3000);
+
+
+function intervallo(){
+    if(app.counter==4){
+        app.counter=0;
+    }
+    else{
+        app.counter++;
+    }    
+    console.log(app.counter);
+    if(app.counter == 0){
+        var prev = 4;
+    }
+    else{
+        var prev = app.counter - 1;
+    }
+    var active = document.getElementsByClassName("selector");
+    active[app.counter].id = "active";
+    active[prev].id = "no-active"
+}
+
+
+var active = document.getElementsByClassName("selector");
+active[0].id = "active"
+
+
 

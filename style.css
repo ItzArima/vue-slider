@@ -55,3 +55,7 @@
 button{
     width: 50px;
 }
+
+#active{
+    border: 3px solid white;
+}
