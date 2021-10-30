@@ -49,7 +49,11 @@ const app = new Vue({
             var active = document.getElementsByClassName("selector");
             active[app.counter].id = "active";
             active[prev].id = "no-active";
-            active[next].id = "no-active"            
+            var activeDisp = document.getElementById("selected-img")  
+            activeDisp.classList.remove("active-display")     
+            activeDisp.classList.add("active-display")        
+            opacity.style.opacity = opacity.style.opacity == "0" ? "1" : "0";
+            opacity.style.transition = "all 1s"
         },
         down(){
             console.log("down");
@@ -69,7 +73,11 @@ const app = new Vue({
             var active = document.getElementsByClassName("selector");
             active[app.counter].id = "active";
             active[prev].id = "no-active";
-            active[next].id = "no-active"
+            var activeDisp = document.getElementById("selected-img")  
+            activeDisp.classList.remove("active-display")     
+            activeDisp.classList.add("active-display")  
+            opacity.style.opacity = opacity.style.opacity == "0" ? "1" : "0";
+            opacity.style.transition = "all 1s"
         }
     }
        
@@ -77,6 +85,13 @@ const app = new Vue({
 
 
 var scorri = setInterval(intervallo, 3000);
+var opacity = document.getElementById("selected-img")
+var animation = setInterval(animazione,1500);
+
+function animazione(){
+    opacity.style.opacity = opacity.style.opacity == "0" ? "1" : "0";
+    opacity.style.transition = "all 1s"
+}
 
 
 function intervallo(){

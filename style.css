@@ -59,3 +59,7 @@ button{
 #active{
     border: 3px solid white;
 }
+
+#selected-img:active{
+    opacity: 1;
+}
