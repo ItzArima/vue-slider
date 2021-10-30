@@ -40,17 +40,11 @@ const app = new Vue({
                 app.counter--;
             }    
             console.log(app.counter);
-            if(app.counter == 0){
-                var prev = 4;
-            }
-            else{
-                var prev = app.counter - 1;
-            }
             if(app.counter == 4){
-                var next = 0;
+                var prev = 0;
             }
             else{
-                var next = app.counter - 1;
+                var prev = app.counter + 1;
             }
             var active = document.getElementsByClassName("selector");
             active[app.counter].id = "active";
@@ -71,12 +65,6 @@ const app = new Vue({
             }
             else{
                 var prev = app.counter - 1;
-            }
-            if(app.counter == 4){
-                var next = 0;
-            }
-            else{
-                var next = app.counter - 1;
             }
             var active = document.getElementsByClassName("selector");
             active[app.counter].id = "active";
